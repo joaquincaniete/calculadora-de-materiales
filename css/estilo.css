@@ -1,0 +1,390 @@
+.error_container {
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 700px;
+  width: 100%;
+  color: white;
+}
+.error_container h1 {
+  font-size: 60px;
+}
+.error_container p {
+  font-size: 18px;
+}
+
+.animacion_error {
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes error {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes error {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+.error {
+  -webkit-animation-name: salto;
+          animation-name: salto;
+}
+
+.menuNavegacion {
+  display: grid;
+  grid-template-columns: 120px 230px 120px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  height: 40px !important;
+  background-color: #195192;
+  background-image: -webkit-gradient(linear, right top, left top, from(#262f7a), color-stop(#243480), color-stop(#224889), color-stop(#175f99), to(#1e659a));
+  background-image: linear-gradient(to left, #262f7a, #243480, #224889, #175f99, #1e659a);
+  color: white;
+  font-size: 12px;
+  -webkit-box-shadow: 0px 0px 2px gray;
+          box-shadow: 0px 0px 2px gray;
+}
+
+.header {
+  height: auto;
+  border-bottom: 1px solid lightgray;
+  background-image: url(/img/fondo.jpg);
+  background-size: 100%;
+}
+.header img {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+.header h1 {
+  font-family: "Oswald";
+}
+.header nav ul {
+  list-style: none;
+  margin: 0;
+}
+.header nav ul li {
+  border-right: 1px solid gray;
+}
+.header nav ul li:first-child {
+  border-left: 1px solid gray;
+}
+.header nav ul li a {
+  text-decoration: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding: 0.6rem;
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.header nav ul li a:hover {
+  background-color: cadetblue;
+  -webkit-box-shadow: 0px 0px 4px white inset;
+          box-shadow: 0px 0px 4px white inset;
+}
+.header nav ul li ul {
+  background-color: #195192;
+  display: none;
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 140px;
+  z-index: 1;
+  font-size: 1rem;
+  padding-left: 0;
+}
+.header nav ul li:hover ul {
+  display: block;
+}
+
+.titulos {
+  font-family: "Oswald";
+}
+.titulos__texto {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: burlywood;
+}
+
+.fila1 {
+  background-color: #D5DEFC !important;
+  color: black !important;
+}
+.fila1__columna1 {
+  font-weight: bolder !important;
+}
+.fila1__columna2 {
+  font-weight: normal !important;
+}
+.fila1__columna3 {
+  font-weight: normal !important;
+  font-style: italic !important;
+}
+
+.fila2 {
+  background-color: #B8CEE6 !important;
+  color: black !important;
+}
+.fila2__columna1 {
+  font-weight: bolder !important;
+}
+.fila2__columna2 {
+  font-weight: normal !important;
+}
+.fila2__columna3 {
+  font-weight: normal !important;
+  font-style: italic !important;
+}
+
+.fila3 {
+  background-color: #CBF2FE !important;
+  color: black !important;
+}
+.fila3__columna1 {
+  font-weight: bolder !important;
+}
+.fila3__columna2 {
+  font-weight: normal !important;
+}
+.fila3__columna3 {
+  font-weight: normal !important;
+  font-style: italic !important;
+}
+
+.footer {
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: lightgray;
+  height: 140px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(lightgray));
+  background-image: linear-gradient(to top, black, lightgray);
+}
+.footer__redes {
+  font-size: 2rem;
+  color: white;
+}
+.footer__texto {
+  font-size: 2rem;
+}
+.footer__texto--italica {
+  color: black;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.contacto {
+  margin: 20px;
+  padding: 10px;
+  line-height: 30px;
+}
+
+.contacto__boton, .contacto__select {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid white;
+  width: auto;
+  padding: 3px;
+  background-color: #195192;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+.contacto__boton:hover, .contacto__select:hover {
+  -webkit-box-shadow: 0px 0px 2px gray;
+          box-shadow: 0px 0px 2px gray;
+}
+.contacto__boton:active, .contacto__select:active {
+  -webkit-box-shadow: 0px 0px 3px gray inset;
+          box-shadow: 0px 0px 3px gray inset;
+  text-shadow: 0px 0px 1px #ccc;
+}
+
+.contacto__select {
+  width: auto;
+}
+
+.contacto__input {
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 0px 0px 2px #ccc inset;
+          box-shadow: 0px 0px 2px #ccc inset;
+  background: white;
+  padding: 1px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: gray;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.contacto__input:focus {
+  border: 1px solid #195192;
+  color: black;
+  font-size: 20px;
+}
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 768px) {
+  #container {
+    width: 100%;
+  }
+
+  #imagenes {
+    grid-template-columns: 1fr;
+  }
+
+  .menuNavegacion {
+    grid-template-columns: 100px 200px 100px;
+    font-size: 11px;
+  }
+}
+@media (min-width: 768px) {
+  #container {
+    width: 100%;
+  }
+
+  #imagenes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  #container {
+    width: 90%;
+  }
+
+  #imagenes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1366px) {
+  #container {
+    width: 90%;
+  }
+
+  #imagenes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#container {
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 0px 0px 10px #ccc;
+          box-shadow: 0px 0px 10px #ccc;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+iframe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  height: 341.3333333333px;
+}
+
+/*FORMAS DE PAGO*/
+aside {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+aside h3 {
+  text-align: center;
+  padding-top: 2rem;
+  margin: 1rem;
+}
+
+.pagos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+  text-align: center;
+}
+.pagos __img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.texto {
+  font-family: "Oswald";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  padding: 2px;
+  font-size: 2rem;
+}
+.texto __parrafo {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,139 @@
+.calculadora-container > * {
+border-radius: 4px;
+padding:10px;
+text-align: left;
+box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+
+}
+html{
+    height:100%;
+}
+
+.navegacion{
+    grid-area: navegacion;
+    background-color:rgba(230,242,255,0.75);
+    height: auto;
+}
+.calculadora{
+    grid-area:calculadora;
+    background-color: aquamarine;
+}
+.sidebar{
+    grid-area:sidebar;
+    background-color: antiquewhite;
+}
+
+.calculadora-container{
+    /*min-height: 800px;*/
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-areas:
+    "navegacion"
+    "calculadora"
+    "sidebar"
+    "tiempoDeApi";
+}
+
+.delete__boton {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid white;
+    width: auto;
+    padding: 3px;
+    background-color: #195192;
+    opacity: 0.8;
+    cursor: pointer;
+    color: white;
+    
+  }
+  .delete__boton:hover {
+    -webkit-box-shadow: 0px 0px 2px gray;
+            box-shadow: 0px 0px 2px gray;
+            opacity: 0.4;
+  }
+  .delete__boton:active {
+    -webkit-box-shadow: 0px 0px 3px gray inset;
+            box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 1px #ccc;
+    opacity: 0.4;
+  }
+  img {
+    border-radius: 4px;
+    z-index: 1;
+    display: block;
+  }
+
+  .error {
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 400px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .vacio {
+    background-color: rgb(216, 200, 200);
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 400px;
+    margin: 0% auto;
+    color: #3633339c;
+  }
+
+    .tipologia__boton {
+        display: block;
+        border-radius: 10px;
+        border: 1px solid white;
+        width: auto;
+        padding: 3px;
+        background-color: #9a9ea3;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+      }
+      .tipologia__boton:hover{
+        -webkit-box-shadow: 0px 0px 2px gray;
+                box-shadow: 0px 0px 2px gray;
+      }
+      .tipologia__boton:active {
+        -webkit-box-shadow: 0px 0px 3px gray inset;
+                box-shadow: 0px 0px 3px gray inset;
+        text-shadow: 0px 0px 1px #ccc;
+}
+@media (min-width:600px){
+    .tiempoDeApi{
+      grid-column: 1/3;
+    }
+    .calculadora-container{
+        grid-template-columns: 100px auto;
+        grid-template-rows: 500px auto ;
+        grid-template-areas:
+        "navegacion calculadora" 
+        "sidebar sidebar" 
+        "tiempoDeApi tiempoDeApi";
+        
+    
+      
+    }
+}
+@media (min-width:720px){
+  .tiempoDeApi{
+    grid-column: 1/4;
+  }
+    .calculadora-container{
+      display: grid;
+      
+      grid-template:
+
+        "navegacion calculadora sidebar"  auto
+        "tiempoDeApi tiempoDeApi tiempoDeApi" auto
+        / 100px 21rem auto;
+         
+    }
+}

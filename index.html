@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="Estudio, Itekove, Arquitectura, formulario, contacto, ubicación, telefono, whatsapp, telegram, mail, Ingeniería, Proyectos, Obras, Home, Dirección, cálculos, hormigón, armado, cómputo, presupuesto, regularizaciones, municipales">
+    <meta name="description"
+        content="Itekove - Estudio Técnico es un estudio de Arquitectura e Ingenieria, te dejamos un formulario de contacto, no dudes en escribirnos...">
+    <title>Itekove - Estudio Técnico - Calculadora de Materiales</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/img/itekove.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/calculadora.css">
+    
+   
+
+</head>
+
+<body id="container">
+    <!--header-->
+    <header class="header">
+        <!--menu-->
+
+        <div>
+            <nav>
+                <ul class="menuNavegacion">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="quienes.html">QUIENES SOMOS</a></li>
+                    <li><a href="">CONTACTO</a>
+                        <ul>
+                            <li><a href="contacto.html">Formulario de Contacto</a> </li>
+                            <li><a href="https://goo.gl/maps/5Y9gkQpCQY123voW9" target="_blank">Ir al Estudio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Final header-->
+    <h1>Calculadora de Materiales</h1>
+    <legend>Con esta aplicación te ayudamos a calcular los materiales necesarios para tu obra</legend>
+
+    <div class="calculadora-container">
+
+        <nav class="navegacion"><strong>TIPO DE CALCULO</strong>
+
+            <button class="tipologia__boton" id="Muros">
+                <img src="./img/noun-wall-1105578.png" alt="Muros" width="90%">
+            </button>
+            <p text-align="center"><strong>Muros</strong></p>
+            <button class="tipologia__boton" id="Encadenado">
+                <img src="./img/noun-beam-3543298.png" alt="Encadenados" width="90%">
+            </button>
+            <p text-align="center"><strong>Encadenados</strong> </p>
+
+
+
+
+
+        </nav>
+
+        <section class="calculadora">
+            <form action="#">
+
+                <fieldset>
+                    <div>
+
+                        <div id="tipo">
+                            <label for="tipo">Que tipo de Muro es</label><br>
+                            <select name="Muro" id="pared">
+                                <option value="15">Muro de ladrillos comunes de 15 cm de Ancho</option>
+                                <option value="30">Muro de ladrillos comunes de 30 cm de Ancho</option>
+                                <option value="45">Mamposteria de Cimiento de 45 cm (2 hiladas)</option>
+
+                            </select>
+                            <br>
+                        </div>
+                        <div>
+                            <label for="metros">Area o longitud en metros cuadrados/ metros</label>
+                            <input type="number" id="metros" placeholder="metros ">
+                            <br>
+                        </div>
+                        <div>
+                            <!-- boton calcula -->
+                            <br>
+                            <button type="reset" class="contacto__boton" id="calcularBTN" onclick="calcularMateriales()"> Calcular Paredes </button>
+
+
+                        </div>
+                        <div id="materiales">
+
+
+                </fieldset>
+            </form>
+        </section>
+
+        <aside class="sidebar"> 
+            
+            <h4 id="ResumenTipo"><strong>RESUMEN PAREDES</strong></h4>
+
+
+
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tipología Calculada</th>
+                            <th>Area o longitud</th>
+                            <th>Borrar</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="justify-content-center" id="resumen">
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <hr>
+            <button type="reset" class="contacto__boton" id="calcularTotalesBTN"> Total Materiales</button>
+            <button type="reset" class="contacto__boton" id="borrarTodoBTN"> Borrar Todo</button>
+
+            <div id="totalMateriales">
+
+            </div>
+
+        </aside>
+        <div class="tiempoDeApi">
+
+            <section id="tiempo">
+
+                <h5>Recuerde Revisar el Pronostico del tiempo para poder realizar la mejor planificación y
+                    seguimiento de su obra...</h5><br>
+                <h5>Prevision de los proximos 7 días para: </h5>
+                <h5 id="ciudad"></h5>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th></th>
+                            <th>Pronostico</th>
+                            <th>Temperaturas ºC</th>
+                        </tr>
+                    </thead>
+                    <tbody class="justify-content-center" id="dias">
+
+                    </tbody>
+                </table>
+                <h6>Los datos del tiempo son obtenidos de la api de https://www.tutiempo.net  </h6>
+            </section>
+        </div>
+        
+        
+    </div>
+    <br>
+    <!--Pie de pagina-->
+    <div>
+    <footer class="footer">
+        <div>
+            <h4 class="footer__texto">© Joaquin Cañete 2021</h4>
+        </div>
+        <div><a class="footer__texto--italica" href="mailto:joaquincaniete@gmail.com">joaquincaniete@gmail.com</a></div>
+        
+        <section class="footer__redes">
+            
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </section>
+        
+    </footer>
+
+    </div>
+    <!-- Boostrap Script-->
+    <script src="./CDN/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/classes.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/encadenados.js"></script>
+    
+</body>
+
+</html>
